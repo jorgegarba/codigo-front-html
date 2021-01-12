@@ -10,6 +10,10 @@ ul {
   padding: 0;
 }
 
+.color-secundario {
+  color: #ff9c63;
+}
+
 .header {
   display: flex;
   height: 60px;
@@ -87,6 +91,10 @@ ul {
   color: #ff9c63;
   border-left: 4px solid #ff9c63;
 }
+.pos-container .menu__lista li.active {
+  color: #ff9c63;
+  border-left: 4px solid #ff9c63;
+}
 .pos-container .tabla {
   flex: 1;
   border: 1px solid #5e5e5e;
@@ -130,13 +138,18 @@ ul {
 .pos-container .tabla .pedido .carta {
   flex: 1;
 }
-.pos-container .tabla .pedido .carta__categorias {
+.pos-container .tabla .pedido .carta h3 {
   height: 60px;
   display: flex;
   align-items: center;
+  align-self: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 8px;
 }
-.pos-container .tabla .pedido .carta__categorias button {
-  margin-right: 10px;
+.pos-container .tabla .pedido .carta h3 span {
+  font-size: 2rem;
 }
 .pos-container .tabla .pedido .carta__botones {
   width: 100%;
@@ -163,14 +176,16 @@ ul {
   border-radius: 36px;
   background: #eee;
   box-shadow: 0px 0px 10px #aaa;
-  width: calc(25%);
+  width: calc(33% - 10px);
+  min-width: 200px;
   text-align: center;
-  margin: 10px;
+  margin: 5px;
   height: 200px;
   padding: 10px;
 }
 .pos-container .tabla .pedido .carta__plato img {
   max-height: 50%;
+  max-width: 100%;
   transition: all 0.5s ease;
 }
 .pos-container .tabla .pedido .carta__plato * {
@@ -195,6 +210,7 @@ ul {
 .pos-container .tabla .pedido .carta__plato:hover .boton-restar:hover {
   background-color: transparent;
   font-size: 2rem;
+  border: 1px solid white;
 }
 .pos-container .tabla .pedido .boleta {
   width: 400px;
@@ -202,11 +218,15 @@ ul {
 .pos-container .tabla .pedido .boleta h3 {
   height: 60px;
   display: flex;
+  align-items: center;
   align-self: center;
   justify-content: center;
   color: white;
   text-align: center;
   padding: 8px;
+}
+.pos-container .tabla .pedido .boleta h3 span {
+  font-size: 2rem;
 }
 .pos-container .tabla .pedido .boleta .comanda {
   background-color: #eee;
